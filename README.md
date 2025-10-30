@@ -1,4 +1,4 @@
-# Oracle-Hr-Project
+
 # 🎯 Oracle HR Schema — Find Employees with Their Managers’ Names
 
 📘 Project Overview
