@@ -6,7 +6,7 @@
 
 🧠 Objective
 
-# 🎯 Find Employees with Their Managers’ Names
+# 🎯 1. Find Employees with Their Managers’ Names
 
 🧠 Differences:
                             
