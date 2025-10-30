@@ -24,17 +24,20 @@ subquery  — Oracle executes the subquery once per outer row.
 
 ⚙️ Performance differences.
                             
-Self Join	                     
+⚙️Self Join
+
 Joins EMPLOYEES table to itself once
 
 Scans both copies together → fast
 
-Correlated Subquery	          
+⚙️Correlated Subquery	    
+
 Looks up manager for each employee separately	   
 
 Executes once per outer row → slower
 
 🧠 Key takeaway:
+
 Both access the same table twice.
 
 Both are logically self-references.
