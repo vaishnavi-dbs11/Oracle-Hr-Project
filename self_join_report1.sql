@@ -1,0 +1,42 @@
+-- Title: Find Employees with their Managers' Names (Self Join vs Correlated Subquery)
+-- Author: Vaishnavi Gujar
+-- Schema: HR Schema in Oracle Database
+
+-- ======================================================
+-- 1. SELF JOIN APPROACH
+-- ======================================================
+
+SELECT 
+    e.employee_id   AS employee_id,
+    e.first_name    AS employee_name,
+    m.employee_id   AS manager_id,
+    m.first_name    AS manager_name
+FROM 
+    employees e
+JOIN 
+    employees m 
+ON 
+    e.manager_id = m.employee_id;
+
+-- ======================================================
+-- 2. CORRELATED SUBQUERY APPROACH
+-- ======================================================
+
+SELECT 
+    e.employee_id   AS employee_id,
+    e.first_name    AS employee_name,
+    (
+        SELECT m.first_name 
+        FROM employees m 
+        WHERE m.employee_id = e.manager_id
+    ) AS manager_name
+FROM 
+    employees e;
+
+-- ======================================================
+-- Notes:
+-- - Both queries are logically equivalent.
+-- - The subquery is a correlated subquery (executed once per outer row).
+-- - Oracle optimizer treats both as self-references.
+-- - Self join executes in one pass, generally faster.
+
