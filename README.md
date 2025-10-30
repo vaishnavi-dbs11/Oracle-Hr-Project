@@ -1,5 +1,5 @@
 
-# 🎯 Oracle HR Schema — Find Employees with Their Managers’ Names
+# 🎯 Find Employees with Their Managers’ Names
 
 📘 Project Overview
 This project demonstrates how to retrieve each employee's manager name using:
