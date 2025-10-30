@@ -15,18 +15,28 @@ To compare:
 🧠Logical behavior of self join vs correlated subquery.
 
 self join - Oracle scans both tables together, joining them in one pass.
+
             Two logical copies of EMPLOYEES, but joined once → only one table scan + indexed lookup.
             
 subquery  — Oracle executes the subquery once per outer row.
+
             If you have 107 employees, that’s 107 lookups into the same table.
 
 ⚙️ Performance differences.
-Approach	                            Description	                                           Behavior
-Self Join	                     Joins EMPLOYEES table to itself once	                Scans both copies together → fast
-Correlated Subquery	           Looks up manager for each employee separately	      Executes once per outer row → slower
+                            
+Self Join	                     
+Joins EMPLOYEES table to itself once
+
+Scans both copies together → fast
+
+Correlated Subquery	          
+Looks up manager for each employee separately	   
+
+Executes once per outer row → slower
 
 🧠 Key takeaway:
 Both access the same table twice.
+
 Both are logically self-references.
-But the self join is set-based (runs once) while
-the correlated subquery is row-based (runs many times).
+
+But the self join is set-based (runs once) while the correlated subquery is row-based (runs many times).
