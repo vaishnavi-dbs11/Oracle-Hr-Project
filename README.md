@@ -14,13 +14,17 @@ To compare:
   
 🧠Logical behavior of self join vs correlated subquery.
 
-self join - Oracle scans both tables together, joining them in one pass.
+*self join   
 
-            Two logical copies of EMPLOYEES, but joined once → only one table scan + indexed lookup.
+Oracle scans both tables together, joining them in one pass.
+
+Two logical copies of EMPLOYEES, but joined once → only one table scan + indexed lookup.
             
-subquery  — Oracle executes the subquery once per outer row.
+*subquery  — 
 
-            If you have 107 employees, that’s 107 lookups into the same table.
+Oracle executes the subquery once per outer row.
+
+If you have 107 employees, that’s 107 lookups into the same table.
 
 ⚙️ Performance differences.
                             
