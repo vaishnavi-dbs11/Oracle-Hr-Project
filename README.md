@@ -1,14 +1,27 @@
 
-# 🎯 Reports
+# 🎯 Employee - Manager Reports
 
-📘 Project Overview
+📘 Project Overview : 
 
+1. Learning how self Joim works 
 
-🧠 Objective
+2. Co-related Subqueries used to acheive Same result 
 
-# 🎯 1. Find Employees with Their Managers’ Names
+3. self- reference nature of self join and subquey 
 
-🧠 Differences:
+4. Why Self Join is more Efficient
+
+📘 Analysis : 
+
+Points 1 & 2 are explained with Psudocodes:
+
+3. 🧠 Similarity and self- reference nature of self join and subquey :
+
+Both access the same table twice.
+
+Both are logically self-references.
+
+4. 🧠 Differences and Why Self Join is more Efficient :
                             
 ⚙️Self Join
 
@@ -28,9 +41,9 @@ Executes the subquery once per outer row → slower
 
 row-based approach.
 
-🧠 Similarity:
+# 🎯 1. Find Employees with Their Managers’ Names
 
-Both access the same table twice.
 
-Both are logically self-references.
+
+
 
